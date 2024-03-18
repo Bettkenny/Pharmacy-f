@@ -23,7 +23,7 @@ const Footer = () => {
       <div className='mt-4'>
         <div className='flex space-x-6'>
           <Link to='/about'>About</Link>
-          <Link to='/hostel'>Pharmacys</Link>
+          <Link to='/pharmacy'>Pharmacys</Link>
           <Link to='/contact'>Contact</Link>
         </div>
         <div className='mt-2'>

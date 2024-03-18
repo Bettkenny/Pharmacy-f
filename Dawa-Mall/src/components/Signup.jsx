@@ -74,7 +74,7 @@ return (
               type='date'
               id='dateOfBirthInput'
               name='date_of_birth'
-              value={DateOfBirth}
+              value={date_of_birth}
               onChange={(e) => setDateOfBirth(e.target.value)}
               className='w-full p-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300'
               placeholder='Enter your date of birth'

@@ -134,6 +134,7 @@ const UserProfile = () => {
       if (selected){
         localStorage.setItem('order_id', selected.id)
         localStorage.setItem('drug_id', selected.drug_id)
+        localStorage.setItem('quantity')
         localStorage.setItem('total_price', selected.total_price)
         orderId = localStorage.getItem('order_id')
      
@@ -451,8 +452,7 @@ const UserProfile = () => {
                   <thead className="bg-orange-400">
                     <tr>
                       <th className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">drug Id</th>
-                      <th className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Check-In</th>
-                      <th className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Check-Out</th>
+                      <th className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Quantity</th>
                       <th className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Review</th>
                       <th className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Payment</th>
                       <th className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Cancel</th>
@@ -462,8 +462,7 @@ const UserProfile = () => {
                     {orders && orders.map((order) => (
                       <tr key={order.id}>
                         <td className="px-3 py-4 whitespace-nowrap">{order.drug_id}</td>
-                        <td className="px-3 py-4 whitespace-nowrap">{order.check_in_date}</td>
-                        <td className="px-3 py-4 whitespace-nowrap">{order.check_out_date}</td>
+                        <td className="px-3 py-4 whitespace-nowrap">{order.quantity}</td>
                         <td className="px-3 py-4 whitespace-nowrap"><button onClick={() => { toggleReviewForm(); handleOrderClick(order.id) }} className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md mr-2">Review</button></td>
                         <td className="px-3 py-4 whitespace-nowrap">
                           <button className="bg-lime-500 hover:bg-lime-600 text-white px-4 py-2 rounded-md" onClick={() => {setPaymentCharges(order.total_price); setOrderToPay(order.id); setIsPayModalOpen(true)}}>
@@ -481,7 +480,7 @@ const UserProfile = () => {
                     <div className="bg-gray-800 bg-opacity-75 w-full h-full absolute"></div>
                     <div className="bg-white rounded-lg p-8 z-50">
                       <h2 className="text-2xl font-semibold mb-4">Write us a Review</h2>
-                      <h4 className="text-2xl font-semibold mb-4">We appreciate your stay at Moringa pharmacy</h4>
+                      <h4 className="text-2xl font-semibold mb-4">We appreciate visiting our pharmacy</h4>
                       <form onSubmit={ submitReview} className="space-y-4">
                         <div className="form-group">
                           <label htmlFor="reviewText" className="block text-gray-600 font-bold mb-1">Review Text</label>
