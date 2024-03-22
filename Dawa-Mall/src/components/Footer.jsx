@@ -27,8 +27,7 @@ const Footer = () => {
           <Link to='/contact'>Contact</Link>
         </div>
         <div className='mt-2'>
-          <p>Dawa Mall</p>
-          <p> Nyeri, Gagere  Road, Maru Court, 1st Floor, </p>
+          <p>Nyaribo Pharmacy</p>
           <p>P.O Box 28860 - 00100, Nyeri Kenya</p>
           <p>Email: infodawa.com</p>
           <p>Phone: 0741409419</p>

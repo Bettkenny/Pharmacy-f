@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home2 from './components/Home2';
 import About from './components/About';
-//import Hostel from './components/Hostel';
+import Pharmacy from './components/Pharmacy';
 import SignUp from './components/Signup';
 import Login from './components/Login';
 import Layout from './components/Layout';
@@ -34,6 +34,7 @@ function App() {
           <Route path='/check-drugs' element={<Drugs/>} />
           <Route path='/about' element={<About/>} />
           <Route path='/signup' element={<SignUp />} />
+          <Route path='/pharmacy' element={<Pharmacy/>} />
           
           {/* Add a default route for the home page */}
           
